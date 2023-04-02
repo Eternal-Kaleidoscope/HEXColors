@@ -34,7 +34,7 @@ function generateColor(){
         remove();
     }
     let numsInd = 0;
-    let nums = 9;
+    let nums = 20;
     for(;numsInd<nums;numsInd++){
         //颜色生成器
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
