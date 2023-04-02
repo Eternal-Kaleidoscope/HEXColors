@@ -80,7 +80,7 @@ input.onkeyup = function (e) {
     var event = e || window.event;
     var key = event.which || event.keyCode || event.charCode;
     if (key == 13) {
-        console.log(typeof input.value)
+        //console.log(typeof input.value)
         /*Do something. 调用一些方法*/
         if(input.value.includes("blue")){
             window.open("https://www.colorhexa.com/" + blues);
