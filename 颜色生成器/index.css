@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     /* 如果没有导入在线字体库，这边就不用写了 */
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+}
+
+
+.title{
+    margin-top: 5%;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+.search{
+    width: 700px;
+    height: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search input{
+    /* display: none; */
+    vertical-align: middle;
+    outline: none;
+    border: none;
+    background-color: #f7f7f7;
+}
+.search #input{
+    width: 450px;
+    padding: 5px;
+    padding-left: 30px;
+    border-radius: 10px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.search #searchBtn{
+    border-radius: 10px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    background-color: #c52d37;
+    width: 100px;
+    height: 30px;
+    text-transform: capitalize;
+    color:#fff;
+    letter-spacing: .1em;
+    cursor: pointer;
+}
+
+.mainFrame{
+    width: 700px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: 18%;
+    padding: 0 25px;
+}
+.mainFrame .colorBox{
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    margin-bottom: 30px;
+    background-color:#f7f7f7;
+    box-shadow: 12px 12px 10px rgba(0,0,0,.1);
+}
+.mainFrame .colorTheme{
+    border-radius:inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    width: inherit;
+    height: 80px;
+    background-color: black;
+}
+.mainFrame .colorBox .codes{
+    text-align: center;
+}
+.mainFrame .colorBox:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: all .5s;
+}
+
+.btns button{
+    margin-top: 15px;
+    border-radius: 25px;
+    padding:15px 35px;
+    background-color: #6600cd;
+    color: #fff;
+    border: none;
+}
+
+.btns button:hover{
+    cursor: pointer;
+}
+
+.notice{
+    position: fixed; 
+    right: 4%;
+    bottom: 5%;
+    padding: 10px 4px;
+    color: white;
+	background:black;
+    border-radius: 15px;
+    transition: all .5s;
+    outline: none;
+    border: none;
+}
+.notice input{
+    font-weight: bolder;
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    width: 70px;
+}
+.notice-show{
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+@media screen and (max-width:376px){
+    .mainFrame{
+        width: 100%;
+        height: 100%;
+        flex: 0 0 25%;
+        padding:5px
+    }
+    .mainFrame .colorBox{
+        margin: 0 5px;
+        margin-bottom: 20px;
+    }
+}
