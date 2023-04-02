@@ -23,7 +23,6 @@ body{
     margin-bottom: 50px;
 }
 .search{
-    display:none;
     width: 700px;
     height: 100%;
     text-align: center;
@@ -132,12 +131,12 @@ body{
     transition: opacity .5s ease-in-out;
 }
 
-@media screen and (min-width:320px and max-width:640px){
+@media screen and ( min-width:376px) and (max-width:641px){
     .mainFrame{
         width: 100%;
         height: 100%;
-        flex: 0 0 25%;
-        padding:5px
+        flex-basis: 25%;
+        padding:50px
     }
     .mainFrame .colorBox{
         margin: 0 5px;

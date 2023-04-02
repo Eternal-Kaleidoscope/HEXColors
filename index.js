@@ -19,8 +19,8 @@ function copyToClipBoard(e){
     document.execCommand("copy");
     input.blur();
     setTimeout(() =>{
-        // span.classList.remove("notice-show");
-        // document.body.removeChild(span);
+        span.classList.remove("notice-show");
+        document.body.removeChild(span);
     },2000);    
 }
 
@@ -34,7 +34,7 @@ function generateColor(){
         remove();
     }
     let numsInd = 0;
-    let nums = 30;
+    let nums = 9;
     for(;numsInd<nums;numsInd++){
         //颜色生成器
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -80,7 +80,7 @@ input.onkeyup = function (e) {
     var event = e || window.event;
     var key = event.which || event.keyCode || event.charCode;
     if (key == 13) {
-        //console.log(typeof input.value)
+        console.log(typeof input.value)
         /*Do something. 调用一些方法*/
         if(input.value.includes("blue")){
             window.open("https://www.colorhexa.com/" + blues);
