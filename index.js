@@ -6,6 +6,7 @@ var generate = document.getElementById("gennerate");
 var mainFrame = document.querySelector("#mainFrame");
 var input = document.querySelector("#input");
 var hexra = document.querySelector("#hexra");
+var colorBox = document.getElementsByClassName(".colorBox");
 // 复制到剪贴板。
 function copyToClipBoard(e){
     const span = document.createElement("span");
@@ -41,6 +42,7 @@ function generateColor(){
         var randomColor = Math.floor(Math.random()*16777215).toString(16);
         let div = document.createElement("div");
         div.className="colorBox";
+        div.setAttribute("id","colorBox")
         mainFrame.appendChild(div);
         let divChild = document.createElement("div");
         divChild.className="colorTheme";
@@ -60,7 +62,18 @@ function remove(){
         mainFrame.removeChild(mainFrame.firstChild);
     }
 }
-
+window.addEventListener("resize", resizeWindow, false);
+function resizeWindow() {
+            console.log(window.innerWidth+ "----"+ window.innerHeight);
+            mainFrame.style.width = window.innerWidth;
+            mainFrame.style.height =  window.innerHeight;
+            console.log(mainFrame.children);
+            for (let colorEle in mainFrame.children) {
+                mainFrame.children[colorEle].clientWidth = (window.innerWidth / 2 + 5);
+                mainFrame.children[colorEle].clientHeight = window.innerWidth / 2;
+                mainFrame.children[colorEle].style.fontSize = 10+"px";
+            }
+        }
 let colors={
     blue:"0000ff",
     green:"00ff00",
@@ -73,9 +86,9 @@ let {
     red:reds
 }=colors;
 
-console.log(blues);
-console.log(greens);
-console.log(reds);
+// console.log(blues);
+// console.log(greens);
+// console.log(reds);
 input.onkeyup = function (e) {
     // 兼容FF和IE和Opera
     var event = e || window.event;
